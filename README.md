@@ -1,8 +1,8 @@
 # Banking Customer Churn Analysis and Prediction
-In this project, we will analyze a datasets about Telco Telecom customers and identify the factors influencing customer churn rates, as well as build an churn prediction model
+  In this project, we will analyze a datasets about Telco Telecom customers and identify the factors influencing customer churn rates, as well as build an churn prediction model
 
 ## 1. Profiling the data
-Firstly, we will review the customer data we have. Specially, we check the data types and missing values:
+  Firstly, we will review the customer data we have. Specially, we check the data types and missing values:
 
 Input:
 ```python
@@ -96,10 +96,16 @@ Output:
 
 Based on the table, we can conclude that: 
 
-All Customer whose TotalCharges is NUll have Tenure Months = 0 (New Customer) and Churn Value = 0, therefore they are new customer and not in Churn
+  All Customer whose TotalCharges is NUll have Tenure Months = 0 (New Customer) and Churn Value = 0, therefore they are new customer and not in Churn
 So we need to remove those rows:
 Input:
 ```python
 new_data = data.dropna(subset=['Total Charges'])
 print(new_data)
 ```
+# 2. Exploratory Data Analyst
+## 2.1 Descriptive Statistics
+
+  The first step of EDA is to summarize the main characteristics of the dataset. This process helps us to identify the general trends, ranges and the variations of the datasets by calculate measures such as mean, median, std, Max/Min Value 
+  
+  We will analyze three columns: MonthLy Charges, Total Charges and Tenure Months to understand customers' willingness to pay, customer value, and their loyalty, which can inform predictions about churn and strategies for customer retention.
