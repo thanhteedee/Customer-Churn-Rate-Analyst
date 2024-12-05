@@ -109,3 +109,25 @@ print(new_data)
   The first step of EDA is to summarize the main characteristics of the dataset. This process helps us to identify the general trends, ranges and the variations of the datasets by calculate measures such as mean, median, std, Max/Min Value 
   
   We will analyze three columns: MonthLy Charges, Total Charges and Tenure Months to understand customers' willingness to pay, customer value, and their loyalty, which can inform predictions about churn and strategies for customer retention.
+
+Input:
+```python
+summary_newdata = new_data[['Monthly Charges', 'Total Charges', 'Tenure Months']].describe().round(2)
+print(summary_newdata)
+```
+
+Output:
+| Statistic        | Monthly Charges | Total Charges | Tenure Months |
+|------------------|-----------------|---------------|---------------|
+| **Count**        | 7032.00         | 7032.00       | 7032.00       |
+| **Mean**         | 64.80           | 2283.30       | 32.42         |
+| **Std**          | 30.09           | 2266.77       | 24.55         |
+| **Min**          | 18.25           | 18.80         | 1.00          |
+| **25%**          | 35.59           | 401.45        | 9.00          |
+| **50% (Median)** | 70.35           | 1397.48       | 29.00         |
+| **75%**          | 89.86           | 3794.74       | 55.00         |
+| **Max**          | 118.75          | 8684.80       | 72.00         |
+
+50% of customers use the service for 9 to 55 months, indicating that most of them do not stay long-term.
+
+Most customers pay a monthly fee ranging from 35.59 to 89.86, suggesting that this price range is common and suitable for mid-tier service packages.
